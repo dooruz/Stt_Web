@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 반응형 웹 뷰포트 브라우저 너비를 장치 너비에 맞춰 표시하고 초기 화면 배율(initial-scale) 설정(zoom 레벨 설정) -->
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- 안드, 애플 웹 앱을 전체 화면에서 작동 시킴-->
+    <link rel="icon" type="image/png" sizes="32x32" href="app_images/logo_32.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="app_images/logo_72.png">
+    <!--안드,애플 주소옆에 있는 로고 -->
+    <link rel="stylesheet" href="style.css">
+    <!--css로 가운데 정렬-->
 
     <title>Thursday</title>
     <style>
         body {
             text-align: center;
             padding: 0;
-            margin: 0;
-        }
-
-        .button_index {
-            width: 100px;
-            height: 25px;
-            width: 250px;
-            font-size: 25px;
-            text-align: center;
-            left: 50%;
-            top: 50%;
-            display: inline;
-            padding: 40px 40px;
-            background-image: url(./translate_btn.png);
-            background-color: transparent;
-            background-position: 0px 0px;
-            vertical-align: middle;
-            background-repeat: no-repeat;
-            border: none;
-            cursor: pointer;
-            height: 16px;
-            padding-left: 16px;
-            margin: auto;
-            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
-    <body style="margin: 0 auto";>
-        <h1 class="logo">
-            
-        </h1>
-        <h3>AR 수어 통역 앱 - 목요일</h3>
 
-        <button type="button" class="button_index" onClick="location.href='index.html'">
-            </button>
+<body style="margin: 0 auto" ;>
+    <header>
+        <img src="app_images/header.png" class="head" width="405" height="102px">
+    </header>
 
-        <p style="font-size:15px">HOW TO USE</p>
+    <div class="parents" style="margin-top: 30px" , style="margin-bottom:30px">
+        <img src="app_images/aei_bg.png" width="300" height="300" alt="aei배경">
+        <div class="kodomo">
+            <img src="app_images/aei_main.gif" width="300" height="300" alt="aei모션">
+        </div>
+    </div>
 
-        <button style="margin-top: 5%"; type="button" class="button_tutorial" onClick="location.href='tutorial.html'">
+
+    <button type="button" class="btn_htu" onClick="location.href='tutorial.html'">
+        <div style="margin-top: 25px">
+            <img src="app_images/btn_htu.png" width="220" height="50">
+        </div>
+    </button>
+
+    <button type="button" class="btn_start" onClick="location.href='index.html'">
+        <div style="margin-top: 20px" , style="vertical-align: middle">
+            <img src="app_images/btn_start.png" width="300" height="112">
+        </div>
+    </button>
+
+    <button type="button" class="btn_about" onClick="location.href='about.html'">
+        <div style="margin-top: 70px" , style="vertical-align: middle">
+            <img src="app_images/potato_fin.png" width="50" height="45">
+        </div>
+    </button>
+
+    <!--
+        <button style="margin-top: -1%" ; type="button" class="button_tutorial" onClick="location.href='tutorial.html'">
             <b>TUTORIAL</b>
         </button>
+       -->
+    <!--<p style="font-size:15px">HOW TO USE</p>-->
+    <!--<button style="margin-top: 5%"; type="button" class="button_tutorial" onClick="location.href='tutorial.html'">
+            <b>TUTORIAL</b>
+        </button>
+    -->
 
-    </body>
+</body>
+
 </html>

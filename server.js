@@ -14,14 +14,17 @@ var io = require('socket.io')(server);
 
 io.sockets.on('connection', function(socket) {
 
-  console.log("We have a new client: " + socket.id);
-  console.log('Player Connected');
-  socket.emit('PlayerConnected');
-  socket.on('message', function(data) {
-  socket.broadcast.emit('message', data);
-  });
 
-  socket.on('disconnect', function() {
-    console.log("Client has disconnected");
-  });
+    console.log("We have a new client: " + socket.id);
+    console.log('Player Connected');
+
+    socket.emit('PlayerConnected');
+
+    socket.on('message', function (data) {
+        socket.broadcast.emit('message', data);
+    });
+
+    socket.on('disconnect', function () {
+        console.log("Client has disconnected");
+    });
 });

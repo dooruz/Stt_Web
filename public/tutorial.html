@@ -1,10 +1,52 @@
-<html>
-    <head>
-        <title>Thursday</title>
-    </head>
-    <body>
-        <h2>TUTORIAL</h2>
-        <button type="button" class="button" onClick="location.href='main.html'">HOME</button>
+<html lang="ko">
 
-    </body>
+<head>
+    <title>Thursday</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 반응형 웹 뷰포트 브라우저 너비를 장치 너비에 맞춰 표시하고 초기 화면 배율(initial-scale) 설정(zoom 레벨 설정) -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 안드, 애플 웹 앱을 전체 화면에서 작동 시킴-->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="app_images/logo_32.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="app_images/logo_72.png">
+    <!--안드,애플 주소옆에 있는 로고 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드</title>
+    <link rel="stylesheet" href="style_tutorial.css">
+</head>
+
+<header>
+    <img src="app_images/header.png" class="head" width="405" height="102px">
+</header>
+
+<body>
+    <div id="slideShow" , style="text-align:center">
+        <ul class="slides">
+            <li><img src="image/tutorial1.png" alt=""></li>
+            <li><img src="image/tutorial2.png" alt=""></li>
+            <li><img src="image/tutorial3.png" alt=""></li>
+        </ul>
+        <p class="controller">
+
+            <!-- &lang: 왼쪽 방향 화살표
+      &rang: 오른쪽 방향 화살표 -->
+            <span class="prev">&lang;</span>
+            <span class="next">&rang;</span>
+        </p>
+    </div>
+    <script src="slideShow.js"></script>
+
+    <button type="button" class="btn_main" onClick="location.href='main.html'">
+        <div style="margin-top: 0px" , style="margin-bottom: 30px">
+            <img src="app_images/btn_main.png" width="300" height="110">
+        </div>
+    </button>
+
+</body>
+
 </html>
