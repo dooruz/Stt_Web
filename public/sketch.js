@@ -141,7 +141,6 @@ function setup() {
 function newTyping() {
   output.html(textfield.value());
   finalText = textfield.value();
-  // sendText(finalText);
 }
 
 function speak(textString) {
@@ -149,9 +148,6 @@ function speak(textString) {
   var cho, jung, jong;
   sentence = textString;
   console.log(sentence);
-  
- // write(data,sentence);
- // fputs(data,sentence);
 
   for (var i = 0; i < sentence.length; i++) {
     if (sentence[i] === " ") {
@@ -182,6 +178,7 @@ function speak(textString) {
 //     socket.emit('message', data);
 //     // socket.emit('message', sentence);
 // }
+
 function sendText(textFinal) {
   dataText[counter] = textFinal; //유니티에서 수신된 문자를 array로 넣기 이때 counter = 0;
   console.log(dataText[counter], counter);
@@ -200,9 +197,9 @@ function draw() {
   if (starting === 1) {
     console.log(dataText[clickCounter], clickCounter);
     socket.emit('message', dataText[clickCounter]);
-    //socket.emit('message', sentence);
+    socket.emit('message', sentence);
     t++;
-    clickCounter = t / 30;
+    clickCounter = t / 100;
     if (clickCounter > dataText.length) {
       t = 0;
       starting = 0;
